@@ -1,0 +1,16 @@
+mongoimport --db tempTestDb --collection restaurants --drop --file ~/Downloads/primer-dataset.json, substituting the right value for the --file option.
+
+mongo ds213199.mlab.com:13199/funstuff -u <dbuser> -p <dbpassword>
+
+https://boiling-reaches-11126.herokuapp.com/ | https://git.heroku.com/boiling-reaches-11126.git
+
+mongodb://hckia:hoomy300@ds213199.mlab.com:13199/funstuff
+
+Green white and red.
+Green represents Islam
+White represents honesty and peace
+Red represents bravery, as well as all the martyrs (in Shia Islam).
+
+The Lion at the center of the Shirokorshid flag actually represents  two things - the Persian lion - now extinct in Iran, but still resides in India and Ali - which also means "lion of god"
+
+The post-revolution flag has the Allah symbol, also saying "lā ilāha illā allāh" (...there is no god but Allāh...)
