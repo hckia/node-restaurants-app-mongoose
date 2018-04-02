@@ -17,26 +17,26 @@ const app = express();
 app.use(bodyParser.json());
 
 // GET requests to /restaurants => return 10 restaurants
-// app.get('/restaurants', (req, res) => {
-//   Restaurant
-//     .find()
-//     // we're limiting because restaurants db has > 25,000
-//     // documents, and that's too much to process/return
-//     .limit(10)
-//     // success callback: for each restaurant we got back, we'll
-//     // call the `.serialize` instance method we've created in
-//     // models.js in order to only expose the data we want the API return.
-//     .then(restaurants => {
-//       res.json({
-//         restaurants: restaurants.map(
-//           (restaurant) => restaurant.serialize())
-//       });
-//     })
-//     .catch(err => {
-//       console.error(err);
-//       res.status(500).json({ message: 'Internal server error' });
-//     });
-// });
+app.get('/restaurants', (req, res) => {
+  Restaurant
+    .find()
+    // we're limiting because restaurants db has > 25,000
+    // documents, and that's too much to process/return
+    .limit(10)
+    // success callback: for each restaurant we got back, we'll
+    // call the `.serialize` instance method we've created in
+    // models.js in order to only expose the data we want the API return.
+    .then(restaurants => {
+      res.json({
+        restaurants: restaurants.map(
+          (restaurant) => restaurant.serialize())
+      });
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ message: 'Internal server error' });
+    });
+});
 
 app.get('/restaurants', (req, res) => {
     const filters = {};
